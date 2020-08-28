@@ -36,16 +36,12 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        System.out.println("Adapter View start");
         View view = act.getLayoutInflater().inflate(R.layout.item_fruit,parent,false);
         Fruit fruit = fruits.get(position);
 
         TextView name = (TextView)view.findViewById(R.id.name_item);
 
         name.setText(fruit.getTfvname());
-
-//        Picasso.get().load(fruit.getImage()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher)
-//                .into(image,new com.squareup.picasso.Callback(){@Override public void onSuccess(){} @Override public void onError(Exception e) {}});
 
         return view;
     }
