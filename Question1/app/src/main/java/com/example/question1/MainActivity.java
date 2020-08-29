@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         final Adapter adapter = new Adapter(listFruits, this);
         final Activity main = this;
         fruitListView.setAdapter(adapter);
-
+        
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
